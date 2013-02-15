@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
+	debug="false">
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%-5p] %d{yyyy-MM-dd HH:mm:ss} :%m%n" />
+		</layout>
+	</appender>
+	
+	<category name="org.apache.jasper"><priority value="DEBUG" /></category>
+	<category name="org.apache.catalina.startup.TldConfig"><priority value="DEBUG" /></category>
+	<category name="org.apache.catalina.session.ManagerBase"><priority value="DEBUG" /></category>
+	
+	<category name="com.fiscal"><priority value="DEBUG" /></category> 
+	<category name="com.system"><priority value="DEBUG" /></category> 
+	
+	<category name="org.apache.ibatis"><priority value="DEBUG" /></category>
+	<category name="org.mybatis.spring"><priority value="DEBUG" /></category>
+	
+	<category name="java.sql.Connection"><priority value="DEBUG" /></category>
+	<category name="java.sql.Statement"><priority value="DEBUG" /></category>
+	<category name="java.sql.PreparedStatement"><priority value="DEBUG" /></category>
+	<category name="java.sql.ResultSet"><priority value="DEBUG" /></category>
+	
+	<category name="com.impler"><priority value="DEBUG" /></category>
+	
+	<root>
+		<priority value="INFO" />
+		<appender-ref ref="STDOUT" />
+	</root>
+
+</log4j:configuration>
